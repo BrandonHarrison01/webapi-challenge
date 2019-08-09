@@ -23,17 +23,20 @@ let chores = [
     {
         "chore": "stuff",
         "userId": 1,
-        "id": 1
+        "id": 1,
+        "completed": 'true'
     },
     {
         "chore": "things",
         "userId": 2,
-        "id": 2
+        "id": 2,
+        "completed": 'false'
     },
     {
         "chore": "more things",
         "userId": 3,
-        "id": 3
+        "id": 3,
+        "completed": 'false'
     }
 ]
 
@@ -113,6 +116,32 @@ server.get('/people/:id', (req, res) => {
     })
     if (!person) {res.status(404).json({ error: 'person does not exist' })}
 })
+
+
+// GET by completed
+
+server.get('/completed', (req, res) => {
+    const comp = req.query.complete
+    const tasks = []
+    console.log(comp)
+
+    // chores.map(chore => {
+    //     console.log(comp, chore.completed)
+    //     if (comp && chore.completed) {
+    //         res.status(200).json(chore)
+    //     } 
+    // })
+
+    for (let i = 0; i < chores.length; i++) {
+        console.log(comp, chores[i].completed)
+        if (comp == chores[i].completed) {
+            tasks.push(chores[i])
+        }
+    }
+
+    res.status(200).json(tasks)
+})
+
 
 const port = process.env.PORT || 8000;
 server.listen(port, () =>
