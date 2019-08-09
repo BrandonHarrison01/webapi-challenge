@@ -16,10 +16,10 @@ The Minimum Viable Product must be completed in three hours.
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add your _Team Lead_ as collaborator on Github.
-- [ ] Clone your forked version of the Repository.
-- [ ] Create a new Branch on the clone: git checkout -b `firstName-lastName`.
+- [x] Create a forked copy of this project.
+- [x] Add your _Team Lead_ as collaborator on Github.
+- [x] Clone your forked version of the Repository.
+- [x] Create a new Branch on the clone: git checkout -b `firstName-lastName`.
 - [ ] Implement the project on this Branch, committing changes regularly.
 - [ ] Push commits: git push origin `firstName-lastName`.
 
@@ -40,13 +40,28 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Mention two parts of Express that you learned about this week.
 
+    express is a node.js framework, express makes it easier to create web apps by abstracting away common tasks
+
+
 - [ ] What is Express Middleware?
+
+  a function that runs before a particular task can be completed
+
 
 - [ ] How can a client send data to an API?
 
+  through a json object
+
+
 - [ ] What can the API return to help clients know if a request was successful?
 
+  a status code
+
+
 - [ ] What Express feature can we use to partition an application into sub-applications?
+
+  routes
+
 
 ## Minimum Viable Product
 
